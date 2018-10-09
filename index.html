@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment1</title>
+    <title>Constructors</title>
 </head>
 
 <body>
@@ -24,20 +24,26 @@
         
         //constructor functions call with arguments
         var plane1 = new Airplane('Beechcraft', 1900, 900);
-        console.log(plane1.print()); //printing results in the browser console
+        console.log("Logging Plane1");
+        plane1.print(); //calling print method 
         var plane2 = new Airplane('Airbus A380', 700, 1200);
-        console.log(plane2.print()); //printing results in the browser console
+        console.log("Logging Plane2");
+        plane2.print(); //calling print method 
         var plane3 = new Airplane('Bombardier', 60, 700);
-        console.log(plane3.print()); //printing results in the browser console
+        console.log("Logging Plane3");
+        plane3.print(); //calling print method 
         
         //adding 10 to seating capacity of all the airplanes
         plane1.seatingCapacity += 10;
         plane2.seatingCapacity += 10;
         plane3.seatingCapacity += 10;
-        console.log('Seating capacity increased')
-        console.log(plane1.print()) //print the plane1 object
-        console.log(plane2.print()) //print the plane2 object
-        console.log(plane3.print()) //print the plane3 object
+        console.log('Seating capacity increased');
+        console.log("Logging Plane1");
+        plane1.print(); //calling print method 
+        console.log("Logging Plane2");
+        plane2.print(); //calling print method 
+        console.log("Logging Plane3");
+        plane3.print(); //calling print method  
         
         //deleting one property of the object
         delete plane1.maxSpeed; 
