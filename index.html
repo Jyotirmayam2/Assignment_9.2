@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment1</title>
+</head>
+
+<body>
+    <script>
+        //constructor functions defination
+        function Airplane(model, seatingCapacity, maxSpeed) {
+            this.model = model;
+            this.seatingCapacity = seatingCapacity;
+            this.maxSpeed = maxSpeed;
+            this.print = function print() {
+                console.log("Model : " + this.model);
+                console.log("Seating Capacity : " + this.seatingCapacity);
+                console.log("Maximum Speed : " + this.maxSpeed);
+            }
+        }
+        
+        //constructor functions call with arguments
+        var plane1 = new Airplane('Beechcraft', 1900, 900);
+        console.log(plane1.print()); //printing results in the browser console
+        var plane2 = new Airplane('Airbus A380', 700, 1200);
+        console.log(plane2.print()); //printing results in the browser console
+        var plane3 = new Airplane('Bombardier', 60, 700);
+        console.log(plane3.print()); //printing results in the browser console
+        
+        //adding 10 to seating capacity of all the airplanes
+        plane1.seatingCapacity += 10;
+        plane2.seatingCapacity += 10;
+        plane3.seatingCapacity += 10;
+        console.log('Seating capacity increased')
+        console.log(plane1.print()) //print the plane1 object
+        console.log(plane2.print()) //print the plane2 object
+        console.log(plane3.print()) //print the plane3 object
+        
+        //deleting one property of the object
+        delete plane1.maxSpeed; 
+        delete plane2.maxSpeed;
+        delete plane3.maxSpeed;
+
+        //printing results in the browser console
+        console.log(plane1);
+        console.log(plane2);
+        console.log(plane3);
+        
+        //setting a new property of the object
+        plane1.avgSpeed = 600;
+        plane2.avgSpeed = 600;
+        plane3.avgSpeed = 600;
+        
+        //printing results in the browser console
+        console.log(plane1);
+        console.log(plane2);
+        console.log(plane3);
+    </script>
+</body>
+
+</html>
